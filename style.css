@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .dropdown {
     display: inline-block;
@@ -51,6 +51,15 @@
         visibility 0s;
 } 
 
+/* Keep dropdown visible when toggled via JS (useful for mobile/touch) */
+.dropdown.open .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+}
+
+
 .formemail:hover{
     opacity:.80;
 }
@@ -63,10 +72,12 @@ form button:hover{
             --bg:#0f0f10;
             --card:#0f1113;
             --muted:#f6eaeb;
-            --accent:#87323c;
+            --red:#87323c;
+            --gray:#d3d0cb;
             --glass: rgba(255,255,255,0.03);
             --max-width:1100px;
         }
+
         *{box-sizing:border-box}
         html,body{height:100%;}
 
@@ -76,7 +87,7 @@ form button:hover{
             /*background-color:#87323c;*/
             margin:0;
             font-family:"Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background:#040404;
+            background:var(--gray);
             color:#e7eef0;
             -webkit-font-smoothing:antialiased;
             -moz-osx-font-smoothing:grayscale;
@@ -95,7 +106,7 @@ form button:hover{
             max-width:var(--max-width);
             margin:40px auto;
             padding:0px 24px 24px;
-            background-color:#040404;
+            background-color:var(--gray);
         }
 
         header{
@@ -116,13 +127,13 @@ form button:hover{
         .logo{
             width:56px; height:56px;
             border-radius:8px;
-            background:linear-gradient(135deg,var(--accent),#87323c 120%);
+            /*background:linear-gradient(135deg,var(--accent),#87323c 120%);*/
             display:flex; align-items:center; justify-content:center;
-            font-weight:800; font-size:20px; color:#fff; font-family:Montserrat, sans-serif;
+            font-weight:800; font-size:20px; color:#fff; font-family:'Montserrat', sans-serif;
             box-shadow: 0 6px 18px rgba(0,0,0,0.5);
         }
         .brand h1{font-size:18px; margin:0; font-weight:700; letter-spacing:0.6px}
-        .brand p{margin:0; color:var(--muted); font-size:12px}
+        .brand p{margin:0;  font-size:12px}
 
         /* Added Code*/
 
@@ -130,29 +141,13 @@ form button:hover{
             display: inline-block;
             margin: 0 10px;
         }
-
-        /* Hamburger menu styles for smaller screens */
-@media (max-width: 768px) { /* iPad and smaller devices */
-    nav {
-        position: relative;
-    }
-
-    .nav-link, .cta {
-        display: none; /* Hide the links */
-    }
-
-    .hamburger {
-        display: none; /* Hide the hamburger button by default */
-    }
-    
-    .nav-menu {
-        display: flex; /* Show the menu by default on larger screens */
-        flex-direction: row;
-        align-items: center;
-    }
     
     /* Mobile styles */
     @media (max-width: 768px) { /* iPad and smaller devices */
+        
+       section.left {overflow-x: wrap;} 
+        
+        
         .hamburger {
             display: block; /* Show the hamburger button */
             cursor: pointer;
@@ -161,14 +156,16 @@ form button:hover{
             border: none;
             color: inherit;
         }
+
+        
     
         .nav-menu {
-            display: none; /* Hide the menu by default in mobile mode */
+            /*display: none; */
             flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: white;
+                position: relative;
+                top: auto;
+                left: auto;
+                background-color: transparent;
             width: 100%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -182,8 +179,32 @@ form button:hover{
             text-align: center;
             border-bottom: 1px solid #ddd;
         }
+
+        /* Make dropdown expand inline on mobile */
+        .dropdown { width: 100%; }
+        .dropdown .nav-link { width: 100%; display: block; text-align: left; padding-left: 16px; }
+        /* On mobile, show dropdown as a floating panel under the hamburger */
+        .dropdown .dropdown-content {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 8px);
+            width: 220px;
+            background: var(--bg);
+            color: var(--muted);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            padding: 8px 0;
+            z-index: 9999;
+            transform: translateY(8px);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+            display: none;
+        }
+        .dropdown.open .dropdown-content { display: block; visibility: visible; opacity: 1; transform: translateY(0); transition-delay: 0s; }
+        .dropdown-content li a { color: inherit; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); }
 }
-}
+
 
 @media (max-width: 480px) { /* iPhone and smaller devices */
     .nav-menu a {
@@ -195,13 +216,13 @@ form button:hover{
         
         nav{display:flex; gap:12px; align-items:center;justify-content: space-between;}
         .nav-link, .nav li a{
-            color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:8px;
+             text-decoration:none; color:#fff; padding:8px 12px; border-radius:8px;
             font-weight:600; font-size:14px;
         }
         .nav-link:hover{color:white; border:1px solid #d0d8da;}
 
         .cta{
-            background-color:var(--muted);
+            /*background-color:var(--muted);*/
             color:#040404; border:0; padding:10px 14px; border-radius:8px; font-weight:700;
             text-decoration:none;
             background-color:#e7eef0;
@@ -219,9 +240,9 @@ form button:hover{
             /*background-color:#87323c; nulled for gradient background in container*/
         }
         .hero-left{max-width:900px;padding:24px; /*background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);*/ border-radius:12px}
-        .eyebrow{color:var(--muted); font-weight:600; font-size:13px; letter-spacing:1px; margin-bottom:12px}
-        .title{font-family:Montserrat, sans-serif; font-weight:800; font-size:44px; margin:0 0 12px}
-        .subtitle{color:var(--muted); margin:0 0 18px}
+        .eyebrow{ font-weight:600; font-size:13px; letter-spacing:1px; margin-bottom:12px}
+        .title{font-family:'Montserrat', sans-serif; font-weight:800; font-size:44px; margin:0 0 12px}
+        .subtitle{ margin:0 0 18px}
         .links{display:flex; gap:12px; margin-top:8px}
         .btn-ghost{background-color:#e7eef0;border:1px solid rgba(255,255,255,0.06); color:var(--bg); padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:600}
         .btn-ghost:hover{background-color:#d0d8da}
@@ -237,7 +258,7 @@ form button:hover{
         .carousel-btn.prev{ left:-50px; }
         .carousel-btn.next{ right:-50px; }
         .carousel-btn:focus{ outline:2px solid var(--accent); }
-        .carousel-caption{ margin-top:10px; color:var(--muted); font-size:13px; }
+        .carousel-caption{ margin-top:10px; color:#fff; font-size:13px; }
 
         .preview{
             background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
@@ -245,7 +266,7 @@ form button:hover{
             align-items:center; justify-content:center;
         }
         .preview img{width:80%; height:320px; object-fit:cover; border-radius:10px; display:block; box-shadow: 0 10px 30px rgba(0,0,0,0.6)}
-        .preview p{color:var(--muted); font-size:13px; margin:0}
+        .preview p{color:#fff; font-size:13px; margin:0}
         
 
 
@@ -257,44 +278,54 @@ form button:hover{
             margin-bottom:42px;
         }
         .card{
-            background:var(--card);
+            background:var(--gray);
             border-radius:12px;
+            border:1px solid var(--bg);
             overflow:hidden;
             position:relative;
             cursor:pointer;
             transition:transform .25s ease, box-shadow .25s ease;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.6);
         }
-        .card:hover{transform:translateY(-8px); box-shadow: 0 24px 48px rgba(0,0,0,0.6)}
+        .card:hover{transform:translateY(-8px); box-shadow: 0 24px 48px rgba(0,0,0,0.6);}
         .card img{width:100%; height:220px; object-fit:cover; background-position:top center; display:block}
         .card .meta{padding:14px}
-        .card .tag{font-size:12px; color:var(--muted); margin-bottom:6px; display:inline-block}
-        .card h3{margin:0; font-size:18px; font-weight:700}
+        .card .tag{font-size:12px; color:var(--bg); margin-bottom:6px; display:inline-block}
+        .card h3{margin:0; font-size:18px; font-weight:900;color:var(--bg);}
 
         /* About + contact */
         .split{
             display:grid;
             grid-template-columns:1fr 350px;
-            gap:18px;
+            gap:180px;
+            margin:30px 30px;
+            padding:30px 20px;
         }
 
         .about {
             font-size:125%;
         }
 
+        .contact{margin-right:40px;}
+
         .about h4{font-size:30px;margin-bottom:20px;}
         .contact h4{font-size:30px;margin-bottom:20px;}
 
+        .aboutcontactcontainer{
+            background-color: var(--red);
+        }
+
         .about, .contact{
-            background-color:#87323c;
+            background-color:var(--red);
             border-radius:12px;
-            padding:18px;
+            padding:20px 0px;
         }
         .about p{color:var(--muted); margin:0 0 12px}
         .contact label{display:block; font-size:13px; margin-bottom:6px}
         .contact input, .contact textarea{width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); /*background:transparent;*/ color:inherit}
         .contact button{margin-top:10px; background:var(--accent); border:0; padding:10px 14px; border-radius:8px; font-weight:700}
 
-        footer{margin-top:46px; color:var(--muted); font-size:13px; text-align:center; padding:18px 0}
+        footer{margin-top:46px;font-size:13px; text-align:center; padding:18px 0;background-color:var(--red);}
 
         /* Modal */
         .modal{
@@ -321,6 +352,7 @@ form button:hover{
             .brand h1{font-size:15px}
             .title{font-size:32px}
             #work, .about, .contact {margin:10px 20px 20px;}
+            .split{margin:30px 15px;padding:20px 0px;}
 
         }
     
