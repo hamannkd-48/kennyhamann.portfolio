@@ -322,7 +322,7 @@ form button:hover{
         }
         .about p{color:var(--muted); margin:0 0 12px}
         .contact label{display:block; font-size:13px; margin-bottom:6px}
-        .contact input, .contact textarea{width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); /*background:transparent;*/ color:inherit}
+        .contact input, .contact textarea{color:var(--bg); width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); /*background:transparent;*/}
         .contact button{margin-top:10px; background:var(--accent); border:0; padding:10px 14px; border-radius:8px; font-weight:700}
 
         footer{margin-top:46px;font-size:13px; text-align:center; padding:18px 0;background-color:var(--red);}
