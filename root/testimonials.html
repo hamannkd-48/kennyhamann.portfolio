@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KH Graphic Design </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        :root{
+            --bg:#0f0f10;
+            --card:#0f1113;
+            --muted:#f6eaeb;
+            --red:#87323c;
+            --gray:#d3d0cb;
+            --glass: rgba(255,255,255,0.03);
+            --max-width:1100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bckred">
+    <div class="site-top">
+        <header>
+            <a class="brand" href="index.html">
+               <div class="logo">KH</div>
+                <div>
+                    <h1>Kenny Hamann</h1>
+                    <p>Graphic Design — Visual Identity</p>
+                </div>
+            </a>
+
+            <nav>
+                <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                <div class="nav-menu">
+                    <a class="nav-link" href="../index.html">Home</a>
+                    <li class="dropdown">
+                        <a class="nav-link">Projects</a>
+                        <ul class="dropdown-content">
+                            <li><a href="ssi.html">Shared Sound Initiative</a></li>
+                            <li><a href="nbrc.html">NBRC</a></li>
+                            <li><a href="sa.html">Sonoma Academy</a></li>
+                            <li><a href="srsyo.html">SRSYO</a></li>
+                            <li><a href="tomnolan.html">Tom Nolan Band</a></li>
+                            <li><a href="redroost.html">Red Roost Yoga</a></li>
+                            <li><a href="barrayum.html">BarraYUM</a></li>
+                        </ul>
+                    </li>
+                    <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="cta" href="#contact">Hire Me</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-left">
+                    <div class="eyebrow">Just Wait!</div>
+                    <h2 class="title">This Page is Coming Soon!</h2>
+                    <p class="subtitle">It is under construction...</p>
+
+                    
+                </div>
+
+                
+            </section>
+        </div>
+    </div>
+
+<script>
+
+    //end kenny script
+
+//nav hamburger script
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // Accessibility: initial state
+    hamburger.setAttribute('aria-expanded', 'false');
+
+    // Ensure the menu is hidden or shown based on screen size
+    const updateMenuVisibility = () => {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('active'); // Ensure menu is visible on larger screens
+            navMenu.style.display = 'flex';
+            hamburger.style.display = 'none'; // Hide hamburger button
+        } else {
+            navMenu.style.display = 'none'; // Hide menu on smaller screens
+            hamburger.style.display = 'block'; // Show hamburger button
+        }
+    };
+
+    // Toggle menu visibility when the hamburger button is clicked
+    hamburger.addEventListener('click', () => {
+        const isVisible = navMenu.style.display === 'flex' || navMenu.classList.contains('active');
+        if (isVisible) {
+            navMenu.style.display = 'none';
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        } else {
+            navMenu.style.display = 'flex';
+            navMenu.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+        }
+    });
+
+    // Update menu visibility on window resize
+    window.addEventListener('resize', updateMenuVisibility);
+
+    // Initial check on page load
+    updateMenuVisibility();
+
+    // Dropdown click-to-toggle for touch/mobile so it stays open until user clicks away
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown) {
+        const dropdownToggle = dropdown.querySelector('a');
+        const dropdownMenu = dropdown.querySelector('.dropdown-content');
+
+        // Toggle on click (and keyboard)
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const wasOpen = dropdown.classList.contains('open');
+            // close first to reset any previous inline adjustments
+            dropdown.classList.remove('open');
+            dropdownMenu.style.maxHeight = '';
+            dropdownMenu.style.overflowY = '';
+            dropdownMenu.style.left = '';
+
+            if (!wasOpen) {
+                dropdown.classList.add('open');
+
+                // allow styles to apply then measure
+                requestAnimationFrame(() => {
+                    const rect = dropdownMenu.getBoundingClientRect();
+                    const parentRect = dropdown.getBoundingClientRect();
+                    const viewportH = window.innerHeight;
+                    const viewportW = window.innerWidth;
+
+                    // If bottom is off-screen, make the menu scrollable with max-height
+                    if (rect.bottom > viewportH - 8) {
+                        const available = Math.max(80, viewportH - rect.top - 16);
+                        dropdownMenu.style.maxHeight = available + 'px';
+                        dropdownMenu.style.overflowY = 'auto';
+                    }
+
+                    // If right edge off-screen, shift left so it fits
+                    if (rect.right > viewportW - 8) {
+                        const shift = rect.right - (viewportW - 8);
+                        // compute current left in pixels relative to parent
+                        const currentLeft = parseFloat(getComputedStyle(dropdownMenu).left) || 0;
+                        const newLeft = currentLeft - shift;
+                        dropdownMenu.style.left = newLeft + 'px';
+                    }
+                });
+            }
+        });
+        dropdownToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                dropdown.classList.toggle('open');
+            }
+        });
+
+        // Prevent clicks inside the menu from bubbling up and closing it
+        if (dropdownMenu) {
+            dropdownMenu.addEventListener('click', (e) => e.stopPropagation());
+        }
+
+        // Close dropdown when clicking outside; clear inline adjustments
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+                dropdownMenu.style.maxHeight = '';
+                dropdownMenu.style.overflowY = '';
+                dropdownMenu.style.left = '';
+            }
+        });
+
+        // Clear adjustments on resize
+        window.addEventListener('resize', () => {
+            dropdownMenu.style.maxHeight = '';
+            dropdownMenu.style.overflowY = '';
+            dropdownMenu.style.left = '';
+            dropdown.classList.remove('open');
+        });
+    }
+
+    
+
+});
+    
+    
+    
+
+
+
+
+       
+    </script>
+
+    </body>
+    </html>

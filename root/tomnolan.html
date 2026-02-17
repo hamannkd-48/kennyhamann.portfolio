@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tom Nolan Band — Kenny Hamann</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        :root{
+            --bg:#0f1115;
+            --card:#0b0c0e;
+            --muted:#9aa4b2;
+            --glass: rgba(255,255,255,0.03);
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            
+            background:var(--red);
+            color:#dfeefb;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            /*padding:48px;*/
+            
+        }
+
+        .flexcontainer {
+            display:flex;
+            align-items:flex-start;
+            justify-content:space-evenly;
+        }
+        .container{
+            width:min(1100px,96%);
+            display:grid;
+            grid-template-columns: 1fr 700px;
+            gap:40px;
+            align-items:start;
+            margin-left:20px;
+        }
+        .panel{
+            background:var(--red);
+            border:1px solid rgba(255,255,255,0.04);
+            padding:36px;
+            border-radius:12px;
+            box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+        }
+
+        .left h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .left .eyebrow{
+            display:inline-block;
+            
+            font-weight:700;
+            letter-spacing:0.06em;
+            font-size:12px;
+            margin-bottom:18px;
+            text-transform:uppercase;
+        }
+        h1{
+            margin:0 0 14px 0;
+            font-size:40px;
+            line-height:1.05;
+            letter-spacing:-0.02em;
+        }
+        p.lead{
+            margin:20px 0 20px 0;
+            
+            font-size:16px;
+            max-width:60ch;
+        }
+        ul.roles{
+            list-style:none;
+            padding:0;
+            margin:18px 0 24px 0;
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+        }
+        ul.roles li{
+            background:rgba(255,255,255,0.13);
+            padding:8px 12px;
+            border-radius:999px;
+            font-weight:600;
+            font-size:13px;
+            color:#dfeefb;
+            border:1px solid rgba(255,255,255,0.02);
+        }
+        .details{
+            display:grid;
+            grid-template-columns:repeat(2, minmax(0,1fr));
+            gap:12px;
+            margin-top:8px;
+        }
+        .detail{
+            background:transparent;
+            
+            font-size:14px;
+            padding:10px;
+        }
+        .contact{
+            margin-top:22px;
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+        }
+        .btn{
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+            padding:10px 14px;
+            background:transparent;
+            color:#dfeefb;
+            
+            border:1px solid rgba(125,211,252,0.12);
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:700;
+            font-size:14px;
+        }
+        .right{
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+            align-items:center;
+            text-align:center;
+            background-image: linear-gradient(95deg, #87323c, #b84b58);
+        }
+
+        .left {background-image: linear-gradient(95deg, #87323c, #b84b58);}
+
+        .right img, .left img {
+            max-width:300px;height:auto; 
+        }
+
+        .portrait{
+            width:220px;
+            height:220px;
+            border-radius:50%;
+            overflow:hidden;
+            display:block;
+            border:1px solid rgba(255,255,255,0.06);
+            box-shadow: 0 10px 40px rgba(3,6,14,0.6);
+            background:linear-gradient(135deg,#0c1220,#071729);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+        .social{
+            display:flex;
+            gap:12px;
+        }
+        /*.social a{
+            color:#dfeefb;
+            text-decoration:none;
+            font-size:13px;
+            padding:8px 10px;
+            border-radius:8px;
+            background:rgba(255,255,255,0.01);
+            border:1px solid rgba(255,255,255,0.02);
+        }*/
+
+        .h2paragraphs {margin-bottom:5px;font-family:'Montserrat', sans-serif;}
+
+        footer.note{
+            margin-top:18px;
+            
+            font-size:13px;
+        }
+
+        @media (max-width:880px){
+            .container{grid-template-columns:1fr; padding:0;margin-left:0px;}
+            body{padding:28px}
+            /*.right{flex-direction:row;justify-content:space-between;align-items:center}*/
+        }
+        @media (max-width: 768px) { /* iPad and smaller devices */
+
+       .portrait img {display:none;}
+       .left, .right {
+        max-width:85vw;
+       }
+        }
+        @media (max-width: 768px) { /* iPad and smaller devices */
+
+       .portrait img {display:none;}
+       .left {
+        max-width:95vw;
+       }
+       .right {display:flex; flex-direction:column; justify-content:space-between; align-items:center;}
+       .right img {max-width:200px;}
+        }
+        
+    </style>
+</head>
+<body>
+<div class="bckred" style="background:var(--red);">
+    <div class="site-top">
+        <header>
+            <a class="brand" href="index.html">
+               <div class="logo">KH</div>
+                <div>
+                    <h1>Kenny Hamann</h1>
+                    <p>Graphic Design — Visual Identity</p>
+                </div>
+            </a>
+
+            <nav>
+                <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+                <div class="nav-menu">
+                    <a class="nav-link" href="../index.html">Home</a>
+                    <li class="dropdown">
+                        <a class="nav-link">Projects</a>
+                        <ul class="dropdown-content">
+                            <li><a href="ssi.html">Shared Sound Initiative</a></li>
+                            <li><a href="nbrc.html">NBRC</a></li>
+                            <li><a href="sa.html">Sonoma Academy</a></li>
+                            <li><a href="srsyo.html">SRSYO</a></li>
+                            <li><a href="tomnolan.html">Tom Nolan Band</a></li>
+                            <li><a href="redroost.html">Red Roost Yoga</a></li>
+                            <li><a href="barrayum.html">BarraYUM</a></li>
+                        </ul>
+                    </li>
+                    <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="index.html#contact">Contact</a>
+                    <a class="cta" href="../index.html#contact">Hire Me</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+           
+        </div>
+    </div>
+    <main class="container" role="main">
+        <aside class="panel right" aria-label="Profile">
+            
+            <img src="assets/tnb/bb.png" alt="Tom Nolan Band">
+            
+            
+        </aside>
+    
+        <section class="panel left" aria-labelledby="about-heading">
+            <div class="eyebrow">Tom Nolan Band</div>
+            <h1 id="about-heading">Brand Redesign</h1>
+            <p class="lead"> In the spring of 2024, I was contracted by the Tom Nolan Band to redesign their brand identity. I surveyed their current state, met with band members, and created a new and improved look.</p>
+<p>The new look included new colors and fonts built on the surveyed tenets and values of the brand. It was wonderful to work with Tom. This project has concluded. To the left is the compiled brandboard summarizing my work for Tom. </p>
+
+            <!--<img src="assets/sa/all25.png" alt="Sonoma Academy 25th Anniversary Logos"style="max-width:500px;">-->
+
+            
+            <!--<div class="contact">
+                <a class="btn-ghost" href="www.northbayrowing.org">North Bay Rowing Club Website</a>
+                <a class="btn-ghost" href="#" rel="noopener" target="_blank">Resume</a>
+            </div>-->
+            
+        
+            
+        </section>
+
+        
+    <br>
+    </main>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // Ensure the menu is hidden or shown based on screen size
+    const updateMenuVisibility = () => {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('active'); // Ensure menu is visible on larger screens
+            navMenu.style.display = 'flex';
+            hamburger.style.display = 'none'; // Hide hamburger button
+        } else {
+            navMenu.style.display = 'none'; // Hide menu on smaller screens
+            hamburger.style.display = 'block'; // Show hamburger button
+        }
+    };
+
+    // Toggle menu visibility when the hamburger button is clicked
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Update menu visibility on window resize
+    window.addEventListener('resize', updateMenuVisibility);
+
+    // Initial check on page load
+    updateMenuVisibility();
+});
+
+//nav hamburger script
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // Accessibility: initial state
+    hamburger.setAttribute('aria-expanded', 'false');
+
+    // Ensure the menu is hidden or shown based on screen size
+    const updateMenuVisibility = () => {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('active'); // Ensure menu is visible on larger screens
+            navMenu.style.display = 'flex';
+            hamburger.style.display = 'none'; // Hide hamburger button
+        } else {
+            navMenu.style.display = 'none'; // Hide menu on smaller screens
+            hamburger.style.display = 'block'; // Show hamburger button
+        }
+    };
+
+    // Toggle menu visibility when the hamburger button is clicked
+    hamburger.addEventListener('click', () => {
+        const isVisible = navMenu.style.display === 'flex' || navMenu.classList.contains('active');
+        if (isVisible) {
+            navMenu.style.display = 'none';
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        } else {
+            navMenu.style.display = 'flex';
+            navMenu.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+        }
+    });
+
+    // Update menu visibility on window resize
+    window.addEventListener('resize', updateMenuVisibility);
+
+    // Initial check on page load
+    updateMenuVisibility();
+
+    
+
+});
+</script>
+ <script>
+
+    //kenny script 
+
+/* const navItem = document.querySelector("nav ul li");
+const dropdown = document.querySelector(".dropdown");
+
+let timeout;
+
+navItem.addEventListener("mouseenter", () => {
+    clearTimeout(timeout);
+    dropdown.style.display = "block";
+});
+
+navItem.addEventListener("mouseleave", () => {
+    timeout = setTimeout(() => {
+        dropdown.style.display = "none";
+    }, 300); // 300ms delay
+}); */
+
+
+    //end kenny script
+
+//nav hamburger script
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    // Accessibility: initial state
+    hamburger.setAttribute('aria-expanded', 'false');
+
+    // Ensure the menu is hidden or shown based on screen size
+    const updateMenuVisibility = () => {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('active'); // Ensure menu is visible on larger screens
+            navMenu.style.display = 'flex';
+            hamburger.style.display = 'none'; // Hide hamburger button
+        } else {
+            navMenu.style.display = 'none'; // Hide menu on smaller screens
+            hamburger.style.display = 'block'; // Show hamburger button
+        }
+    };
+
+    // Toggle menu visibility when the hamburger button is clicked
+    hamburger.addEventListener('click', () => {
+        const isVisible = navMenu.style.display === 'flex' || navMenu.classList.contains('active');
+        if (isVisible) {
+            navMenu.style.display = 'none';
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        } else {
+            navMenu.style.display = 'flex';
+            navMenu.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+        }
+    });
+
+    // Update menu visibility on window resize
+    window.addEventListener('resize', updateMenuVisibility);
+
+    // Initial check on page load
+    updateMenuVisibility();
+
+    // Dropdown click-to-toggle for touch/mobile so it stays open until user clicks away
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown) {
+        const dropdownToggle = dropdown.querySelector('a');
+        const dropdownMenu = dropdown.querySelector('.dropdown-content');
+
+        // Toggle on click (and keyboard)
+        dropdownToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const wasOpen = dropdown.classList.contains('open');
+            // close first to reset any previous inline adjustments
+            dropdown.classList.remove('open');
+            dropdownMenu.style.maxHeight = '';
+            dropdownMenu.style.overflowY = '';
+            dropdownMenu.style.left = '';
+
+            if (!wasOpen) {
+                dropdown.classList.add('open');
+
+                // allow styles to apply then measure
+                requestAnimationFrame(() => {
+                    const rect = dropdownMenu.getBoundingClientRect();
+                    const parentRect = dropdown.getBoundingClientRect();
+                    const viewportH = window.innerHeight;
+                    const viewportW = window.innerWidth;
+
+                    // If bottom is off-screen, make the menu scrollable with max-height
+                    if (rect.bottom > viewportH - 8) {
+                        const available = Math.max(80, viewportH - rect.top - 16);
+                        dropdownMenu.style.maxHeight = available + 'px';
+                        dropdownMenu.style.overflowY = 'auto';
+                    }
+
+                    // If right edge off-screen, shift left so it fits
+                    if (rect.right > viewportW - 8) {
+                        const shift = rect.right - (viewportW - 8);
+                        // compute current left in pixels relative to parent
+                        const currentLeft = parseFloat(getComputedStyle(dropdownMenu).left) || 0;
+                        const newLeft = currentLeft - shift;
+                        dropdownMenu.style.left = newLeft + 'px';
+                    }
+                });
+            }
+        });
+        dropdownToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                dropdown.classList.toggle('open');
+            }
+        });
+
+        // Prevent clicks inside the menu from bubbling up and closing it
+        if (dropdownMenu) {
+            dropdownMenu.addEventListener('click', (e) => e.stopPropagation());
+        }
+
+        // Close dropdown when clicking outside; clear inline adjustments
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+                dropdownMenu.style.maxHeight = '';
+                dropdownMenu.style.overflowY = '';
+                dropdownMenu.style.left = '';
+            }
+        });
+
+        // Clear adjustments on resize
+        window.addEventListener('resize', () => {
+            dropdownMenu.style.maxHeight = '';
+            dropdownMenu.style.overflowY = '';
+            dropdownMenu.style.left = '';
+            dropdown.classList.remove('open');
+        });
+    }
+
+    
+
+});
+    
+    
+    
+    // Carousel functionality
+
+// Carousel for aside.preview
+ (function(){
+  const carouselRoot = document.querySelector('.preview');
+  if(!carouselRoot) return;
+
+  const imgEl = carouselRoot.querySelector('.carousel-img');
+  const prevBtn = carouselRoot.querySelector('.carousel-btn.prev');
+  const nextBtn = carouselRoot.querySelector('.carousel-btn.next');
+
+  const carouselImages = [
+    { src: 'assets/srsyo/marchfinal.png', alt: 'Selected project preview' },
+    { src: 'assets/sa/cancover.png', alt: 'Project 2 preview' },
+    { src: 'assets/sa/ssi.png', alt: 'Project 3 preview' }
+  ];
+
+  let idx = 0;
+  let intervalId = null;
+  const delay = 4000;
+  const fadeMs = 450;
+
+  function showIndex(i){
+    idx = (i + carouselImages.length) % carouselImages.length;
+    const next = carouselImages[idx];
+    if(!next) return;
+    // fade out/in
+    imgEl.classList.add('fading');
+    setTimeout(()=>{
+      imgEl.src = next.src;
+      imgEl.alt = next.alt || '';
+      imgEl.classList.remove('fading');
+    }, fadeMs);
+  }
+
+  function next(){ showIndex(idx + 1); }
+  function prev(){ showIndex(idx - 1); }
+
+  function start(){ stop(); intervalId = setInterval(next, delay); }
+  function stop(){ if(intervalId) { clearInterval(intervalId); intervalId = null; } }
+
+  // init
+  if(carouselImages.length > 0){
+    imgEl.src = carouselImages[0].src;
+    imgEl.alt = carouselImages[0].alt || '';
+  }
+  if(carouselImages.length <= 1){
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  }
+
+  nextBtn.addEventListener('click', ()=>{
+    next();
+    stop(); // pause auto after manual interaction
+  });
+  prevBtn.addEventListener('click', ()=>{
+    prev();
+    stop();
+  });
+
+  carouselRoot.addEventListener('mouseenter', stop);
+  carouselRoot.addEventListener('mouseleave', start);
+
+  document.addEventListener('keydown', (e)=>{
+    if(!carouselRoot.matches(':hover')) return;
+    if(e.key === 'ArrowRight') { next(); stop(); }
+    if(e.key === 'ArrowLeft') { prev(); stop(); }
+  });
+
+  // start autoplay
+  start();
+})();
+
+    //end carousel
+
+
+        // Small helper interactions: open project modal
+        const cards = document.querySelectorAll('.card');
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+
+        function openModal(title, desc, img){
+            modalTitle.textContent = title;
+            modalDesc.textContent = desc;
+            modalImg.src = img;
+            modal.setAttribute('aria-hidden','false');
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            // focus trap basic
+            setTimeout(()=>modal.querySelector('.close').focus(),60);
+        }
+        function closeModal(){
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden','true');
+            document.body.style.overflow = '';
+        }
+
+        cards.forEach(card=>{
+            card.addEventListener('click', ()=> {
+                const title = card.dataset.title;
+                const desc = card.dataset.desc;
+                const img = card.dataset.img;
+                openModal(title, desc, img);
+            });
+            card.addEventListener('keydown', (e)=>{
+                if(e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.click();
+                }
+            });
+        });
+
+        modal.addEventListener('click', (e)=>{
+            if(e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e)=>{
+            if(e.key === 'Escape') closeModal();
+        });
+
+        // contact form fallback (opens mail client with prefilled subject/body)
+        function submitContact(e){
+            e.preventDefault();
+            const form = e.target;
+            const name = encodeURIComponent(form.name.value || '');
+            const email = encodeURIComponent(form.email.value || '');
+            const message = encodeURIComponent(form.message.value || '');
+            const subject = encodeURIComponent('Inquiry from portfolio — ' + (name || email));
+            const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+            window.location.href = 'mailto:youremail@example.com?subject=' + subject + '&body=' + body;
+            return false;
+        }
+
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</html>
