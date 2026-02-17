@@ -1,4 +1,4 @@
-Welcome to my personal site. All graphic design work that was advertized is my own.
+Welcome to my personal site. All graphic design work that is advertised is my own.
 
 
 # Kenny Hamann — Design Portfolio
