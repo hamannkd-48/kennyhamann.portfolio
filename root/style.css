@@ -236,6 +236,8 @@ form button:hover{
     @media (max-width: 768px) { /* iPad and smaller devices */
         
        section.left {overflow-x: wrap;} 
+
+        .workh3{margin-top:15px;}
         
         .announce {font-size:90%;}
         /*.announce-text{margin-right:20px;}*/
