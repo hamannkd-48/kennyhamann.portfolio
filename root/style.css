@@ -383,7 +383,7 @@ form button:hover{
             margin-bottom:42px;
         }
 
-        #work h3 {margin:0; font-family:Montserrat, sans-serif; font-weight:800;font-size:30px;color:var(--bg);}
+        #work h3:first-of-type {margin:0; font-family:Montserrat, sans-serif; font-weight:800;font-size:30px;color:var(--bg);}
 
         .card{
             background:var(--gray);
