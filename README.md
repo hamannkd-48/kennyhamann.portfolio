@@ -1,7 +1,7 @@
 Welcome to my personal site. All graphic design work that is advertised is my own.
 
 
-# If You're Seeing This On The Web, LET ME KNOW it's an error
+# If You're Seeing This On The Web, LET ME KNOW: it's an error
 
 Live Site: https://www.hamann.earth
 
