@@ -337,6 +337,8 @@ form button:hover{
 
         .cta:hover{background-color:#d0d8da;}
 
+        .navcta {font-size:14px;}
+
         /* Hero */
         .hero{
             display:grid;
