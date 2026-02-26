@@ -239,7 +239,7 @@ form button:hover{
              text-decoration:none; color:#fff; padding:8px 12px; border-radius:8px;
             font-weight:600; font-size:14px;
         }
-        .nav-link:hover{color:white; border:1px solid #d0d8da;}
+        .nav-link:hover{color:white; border:1px solid #d0d8da;margin:0px 9px;padding-top:7px;}
 
         .cta{
             /*background-color:var(--muted);*/
@@ -370,7 +370,7 @@ form button:hover{
         .contact input, .contact textarea{color:var(--bg); width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); /*background:transparent;*/}
         .contact button{margin-top:10px; background:var(--accent); border:0; padding:10px 14px; border-radius:8px; font-weight:700}
 
-        footer{margin-top:46px;font-size:13px; text-align:center; padding:18px 0;/*background-color:var(--red);*/}
+        footer{margin-top:10px;font-size:13px; text-align:center; padding:18px 0;/*background-color:var(--red);*/}
 
         /* Modal */
         .modal{
