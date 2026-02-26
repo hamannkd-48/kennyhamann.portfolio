@@ -232,94 +232,7 @@ form button:hover{
         .bigimg-sa {max-width:500px;}
 
     
-    /* Mobile styles */
-    @media (max-width: 768px) { /* iPad and smaller devices */
-        
-       section.left {overflow-x: wrap;} 
-
-       .workh3{margin-top:15px;}
-        
-        .announce {font-size:90%;}
-        /*.announce-text{margin-right:20px;}*/
-
-            .hamburger {
-                display: block; /* Show the hamburger button */
-                cursor: pointer;
-                font-size: 24px;
-                background: none;
-                border: none;
-                color: inherit;
-            }
-
-            /* Make the nav row span full width so the dropdown/menu can appear below it */
-            nav {
-                position: relative;
-                flex: 1;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end; /* keep hamburger aligned right while allowing brand to sit left */
-            }
-
-            /* Position the menu as an absolute panel under the nav row */
-            .nav-menu {
-                display: none;
-                position: absolute;
-                left: -20px;
-                right: 0;
-                top: calc(100% + 8px);
-                flex-direction: column;
-                width: 110px;
-                background-color: var(--bg);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-                border-radius: 8px;
-                z-index: 9998;
-                padding: 8px 0;
-            }
-
-            .nav-menu.active {
-                display: flex; /* Show the menu when the 'active' class is added */
-            }
     
-        .nav-menu a {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            margin-bottom:10px;
-        }
-
-        /* Make dropdown expand inline on mobile */
-        .dropdown { width: 100%; }
-        .dropdown .nav-link { width: 100%; display: block; text-align: left; padding-left: 16px; }
-        /* On mobile, show dropdown as a floating panel under the hamburger */
-        .dropdown .dropdown-content {
-            position: absolute;
-            left: 0;
-            top: calc(100% + 8px);
-            width: 220px;
-            background: var(--bg);
-            color: var(--muted);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border-radius: 8px;
-            padding: 8px 0;
-            z-index: 9999;
-            transform: translateY(8px);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
-            display: none;
-        }
-        .dropdown.open .dropdown-content { display: block; visibility: visible; opacity: 1; transform: translateY(0); transition-delay: 0s; }
-        .dropdown-content li a { color: #fff; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); }
-}
-
-
-@media (max-width: 480px) { /* iPhone and smaller devices */
-    .nav-menu a {
-        font-size: 14px;
-    }
-}
-        
-        /*END*/
         
         nav{display:flex; gap:12px; align-items:center;justify-content: space-between;}
         .nav-link, .nav li a{
@@ -481,5 +394,92 @@ form button:hover{
             }
         }
 
+    /* MOBILE NAV */
+
+    @media (max-width: 768px) { /* iPad and smaller devices */
+        
+       section.left {overflow-x: wrap;} 
+
+       .workh3{margin-top:15px;}
+        
+        .announce {font-size:90%;}
+        /*.announce-text{margin-right:20px;}*/
+
+            .hamburger {
+                display: block; /* Show the hamburger button */
+                cursor: pointer;
+                font-size: 34px;
+                background: none;
+                border: none;
+                color: inherit;
+            }
+
+            /* Make the nav row span full width so the dropdown/menu can appear below it */
+            nav {
+                position: relative;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end; /* keep hamburger aligned right while allowing brand to sit left */
+            }
+
+            /* Position the menu as an absolute panel under the nav row */
+            .nav-menu {
+                display: none;
+                position: absolute;
+                left: -20px;
+                right: 0;
+                top: calc(100% + 8px);
+                flex-direction: column;
+                width: 110px;
+                background-color: var(--bg);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+                border-radius: 8px;
+                z-index: 9998;
+                padding: 8px 0;
+            }
+
+            .nav-menu.active {
+                display: flex; /* Show the menu when the 'active' class is added */
+            }
+    
+        .nav-menu a {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            margin-bottom:10px;
+        }
+
+        /* Make dropdown expand inline on mobile */
+        .dropdown { width: 100%; }
+        .dropdown .nav-link { width: 100%; display: block; text-align: left; padding-left: 16px; }
+        /* On mobile, show dropdown as a floating panel under the hamburger */
+        .dropdown .dropdown-content {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 8px);
+            width: 220px;
+            background: var(--bg);
+            color: var(--muted);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            padding: 8px 0;
+            z-index: 9999;
+            transform: translateY(8px);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+            display: none;
+        }
+        .dropdown.open .dropdown-content { display: block; visibility: visible; opacity: 1; transform: translateY(0); transition-delay: 0s; }
+        .dropdown-content li a { color: #fff; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+}
+
+
+@media (max-width: 480px) { /* iPhone and smaller devices */
+    .nav-menu a {
+        font-size: 14px;
+    }
+}
         
     
