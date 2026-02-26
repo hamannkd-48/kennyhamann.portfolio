@@ -250,7 +250,7 @@ form button:hover{
 
         .cta:hover{background-color:#d0d8da;}
 
-        .navcta {font-size:14px;}
+        .navcta {font-size:14px;padding:8px 12px;}
 
         /* Hero */
         .hero{
