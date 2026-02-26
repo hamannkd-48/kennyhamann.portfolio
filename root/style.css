@@ -301,7 +301,8 @@ form button:hover{
         }
 
         .workh3 {margin:0; font-family:Montserrat, sans-serif; font-weight:800;font-size:30px;color:var(--bg);}
-
+        #work .work-subtitle {color:var(--bg); margin:0}
+        
         .card{
             background:var(--gray);
             border-radius:12px;
@@ -373,11 +374,13 @@ form button:hover{
 
         @media (max-width:980px){
             .hero{grid-template-columns:1fr; }
-            .split{grid-template-columns:1fr}
+            .split{grid-template-columns:1fr;gap:0px;}
             .grid{grid-template-columns:repeat(2,1fr)}
-            .site-top{margin:0px auto; /*padding:30px 16px 16px 16px; OVERRULED BY BELOW */}
+            .site-top{margin:0px auto; padding-bottom:0px;/*padding:30px 16px 16px 16px; OVERRULED BY BELOW */}
             .site-bottom{margin:0px; padding:0px;}
             #work, .about, .contact {margin:10px 20px 20px;}
+            main.container{padding:28px;}
+            .work-subtitle {display:none;}
         }
         @media (max-width:560px){
             .grid{grid-template-columns:1fr}

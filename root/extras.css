@@ -6,11 +6,13 @@
             header{max-width:1150px;}
         }
 
-@media (max-width:1080px){
+@media only screen and (min-width: 980px) and (max-width: 1080px){
             .container{grid-template-columns:1fr; padding:0;margin-left:0px;}
             body{padding:28px}
             /*.right{flex-direction:row;justify-content:space-between;align-items:center}*/
         }
+
+
 
 @media (max-width: 768px) { /* iPad and smaller devices */
 
