@@ -389,7 +389,7 @@ form button:hover{
             .site-top{margin:0px auto; padding-bottom:0px;/*padding:30px 16px 16px 16px; OVERRULED BY BELOW */}
             .site-bottom{margin:0px; padding:0px;}
             #work, .about, .contact {margin:10px 20px 20px;}
-            main.container{padding:28px;}
+            main.container{padding:18px;}
             .work-subtitle {display:none;}
             .panel {padding:20px;}
         }
@@ -413,9 +413,7 @@ form button:hover{
     @media (max-width: 768px) { /* iPad and smaller devices */
         
        section.left {overflow-x: wrap;} 
-
        .workh3{margin-top:15px;}
-        
         .announce {font-size:90%;}
         /*.announce-text{margin-right:20px;}*/
 
@@ -487,7 +485,12 @@ form button:hover{
         }
         .dropdown.open .dropdown-content { display: block; visibility: visible; opacity: 1; transform: translateY(0); transition-delay: 0s; }
         .dropdown-content li a { color: #fff; padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); }
-}
+
+        .left, .right {
+        max-width:90vw;
+       }
+
+    }
 
 
 @media (max-width: 480px) { /* iPhone and smaller devices */
