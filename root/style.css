@@ -269,6 +269,9 @@ form button:hover{
         .btn-ghost{background-color:#e7eef0;border:1px solid rgba(255,255,255,0.06); color:var(--bg); padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:600}
         .btn-ghost:hover{background-color:#d0d8da}
 
+        
+        .socialbtn i {font-weight:bolder;font-size:16px;}
+
         /* Hero right preview */
 
         /* New carousel styles */

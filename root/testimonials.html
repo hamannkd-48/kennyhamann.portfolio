@@ -7,8 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/home/favicon.png" />
-    <link rel="stylesheet" href="extras.css" />
+    <!--<link rel="stylesheet" href="extras.css" />-->
     <script src="scripts/nav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
         @media (min-width:1160px){
@@ -181,10 +182,19 @@
 
        
        .left, .right {
-        max-width:85vw;
+        max-width:90vw;
        }
-       
+       @media (min-width:1200px){
+            .left, a.brand{margin-left:50px;}
+            header{max-width:1150px;}
         }
+       
+    }
+
+    .site-top {
+    margin: 0px;
+    }
+
     </style>
 </head>
 <body>
@@ -247,7 +257,7 @@
             
         </section>
 
-        <aside class="panel right" aria-label="Profile">
+         <aside class="panel right" aria-label="Profile">
             <div class="portrait" role="img" aria-label="Portrait">
                 <!-- Replace portrait.jpg with your photo -->
                 <img src="assets/about/pfp.jpg" alt="Portrait of Kenny">
@@ -255,21 +265,21 @@
 
             <div>
                 <div style="font-weight:700;font-size:18px">Kenny Hamann</div>
-                <div style="font-size:13px;margin-top:4px">Designer & Engineer</div>
+                <div style="font-size:13px;margin-top:4px">Designer & Brand Consultant</div>
             </div>
 
             <nav class="social" aria-label="Social links">
                 <!--<a href="mailto:kennyhamann1312@gmail.com" rel="noopener" target="_blank" class="btn-ghost">Email</a>-->
-                <a href="https://www.instagram.com/" rel="noopener" target="_blank" class="btn-ghost"style="font-size:14px;">Instagram: @hamannkenny_48</a>
+                <a href="https://www.instagram.com/" rel="noopener" target="_blank" class="btn-ghost socialbtn"style="font-size:14px;"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/kenneth-hamann-111490321/" rel="noopener" target="_blank" class="btn-ghost socialbtn"style="font-size:14px;"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <div class="contact" style="padding:0px;margin:0px;">
+                <a class="btn-ghost" href="assets/about/resume.png" rel="noopener" target="_blank">My Resume</a>
+            </div>
                 <!--<a href="#" rel="noopener" target="_blank" class="btn-ghost">LinkedIn</a>-->
             </nav>
             <p style="margin-top:24px;font-size:15px;line-height:1.6;">
                 I enjoy turning complex problems into simple, elegant solutions. If you'd like to work together or just say hi, get in touch.
             </p>
-
-            <div class="contact" style="padding:0px;margin:0px;">
-                <a class="btn-ghost" href="assets/about/resume.png" rel="noopener" target="_blank">My Resume</a>
-            </div>
 
 
             <footer class="note">Available for contract work. Rates and timelines vary by project.</footer>
