@@ -315,7 +315,19 @@ form button:hover{
   animation-duration: .2ms; 
   animation-timeline: view();
 }*/
-  
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .55s ease, transform .55s ease;
+}
+
+/* NOT WORKING ^^^^*/
+
         .card{
             background:var(--gray);
             border-radius:12px;
