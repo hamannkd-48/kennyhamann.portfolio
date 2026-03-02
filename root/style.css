@@ -305,7 +305,17 @@ form button:hover{
 
         .workh3 {margin:0; font-family:Montserrat, sans-serif; font-weight:800;font-size:30px;color:var(--bg);}
         #work .work-subtitle {color:var(--bg); margin:0}
-        
+
+      /* @keyframes slide-in {
+    from { opacity: 1; transform: translateY(5px) scale(0.88); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+      .scroll-element {
+  animation: slide-in backwards; 
+  animation-duration: .2ms; 
+  animation-timeline: view();
+}*/
+  
         .card{
             background:var(--gray);
             border-radius:12px;
@@ -417,7 +427,7 @@ form button:hover{
         
        section.left {overflow-x: wrap;} 
        .workh3{margin-top:15px;}
-        .announce {font-size:90%;}
+        .announce {font-size:85%;}
         /*.announce-text{margin-right:20px;}*/
 
             .hamburger {
