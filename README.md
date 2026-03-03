@@ -41,7 +41,7 @@ Each .html page still does have a lot of embedded <style> script (tbh most of it
 
 Website: https://www.hamann.earth  
 Email: kennyhamann1312@gmail.com  
-LinkedIn: Almost there!
+LinkedIn: https://www.linkedin.com/in/kenneth-hamann-111490321/
 
 
 
