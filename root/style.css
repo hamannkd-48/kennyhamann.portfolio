@@ -440,6 +440,7 @@ form button:hover{
        section.left {overflow-x: wrap;} 
        .workh3{margin-top:15px;}
         .announce {font-size:85%;}
+        footer {padding-bottom:36px;}
         /*.announce-text{margin-right:20px;}*/
 
             .hamburger {
@@ -495,7 +496,7 @@ form button:hover{
             position: absolute;
             left: 0;
             top: calc(100% + 8px);
-            width: 220px;
+            width: 180px;
             background: var(--bg);
             color: var(--muted);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
