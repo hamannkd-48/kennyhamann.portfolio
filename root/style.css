@@ -353,6 +353,8 @@ form button:hover{
             border-radius:12px;
             box-shadow: 0 6px 30px rgba(2,6,23,0.6);
         }
+
+        .h2paragraphs {margin-bottom:5px;font-family:'Montserrat', sans-serif;}
         
         /* About + contact */
         .split{
@@ -392,7 +394,7 @@ form button:hover{
         .contact input, .contact textarea{color:var(--bg); width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); /*background:transparent;*/}
         .contact button{margin-top:10px; background:var(--accent); border:0; padding:10px 14px; border-radius:8px; font-weight:700}
 
-        footer{margin-top:10px;font-size:13px; text-align:center; padding:18px 0;/*background-color:var(--red);*/}
+        footer{margin-top:10px;font-size:13px; text-align:center; padding:36px 0;/*background-color:var(--red);*/}
 
         /* Modal */
         .modal{
