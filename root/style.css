@@ -73,6 +73,9 @@ form button:hover{
     opacity:.8;
 }
 
+textarea #message {field-sizing: fixed;font-family: 'Roboto', sans-serif;}
+#contactForm label {margin-top:10px;}
+
         :root{
             --bg:#0f0f10;
             --card:#0f1113;
