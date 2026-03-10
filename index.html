@@ -26,6 +26,8 @@
 
     <div class="bckred">
     <div class="site-top">
+        
+        <!--<div id="navbar">-->
         <header>
             <a class="brand" href="index.html">
                <div class="logo">KH</div>
@@ -59,6 +61,7 @@
                 </div>
             </nav>
         </header>
+        <!--</div> #NAVBAR-->
 
         <main>
             <section class="hero">
@@ -276,7 +279,7 @@
         </main>
 
         <footer style="background-color:var(--red);">
-            © <span id="year"></span> Kenny Hamann — Designed & Crafted
+            © <span id="year"></span> Kenny Hamann — Designed & Crafted <a href="testpage.html"style="margin-left:20px;color:#fff;text-decoration:underline">test page</a>
         </footer>
     </div>
     </div>
@@ -297,24 +300,19 @@
 
     //kenny script 
 
-/* const navItem = document.querySelector("nav ul li");
-const dropdown = document.querySelector(".dropdown");
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    // User is scrolling UP, show the navbar
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    // User is scrolling DOWN, hide the navbar
+    document.getElementById("navbar").style.top = "-50px"; /* Match the height of the navbar */
+  }
+  prevScrollpos = currentScrollPos;
+}
 
-let timeout;
-
-navItem.addEventListener("mouseenter", () => {
-    clearTimeout(timeout);
-    dropdown.style.display = "block";
-});
-
-navItem.addEventListener("mouseleave", () => {
-    timeout = setTimeout(() => {
-        dropdown.style.display = "none";
-    }, 300); // 300ms delay
-}); */
-
-
-    //end kenny script
 
 //nav hamburger script
 

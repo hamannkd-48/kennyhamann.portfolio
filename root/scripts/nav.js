@@ -1,3 +1,21 @@
+//nav appear on up scroll
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    // User is scrolling UP, show the navbar
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    // User is scrolling DOWN, hide the navbar
+    document.getElementById("navbar").style.top = "-50px"; /* Match the height of the navbar */
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+
+
 // Shared nav behavior: toggle + click-away for mobile
 if (!window._navBehaviorInstalled) {
   window._navBehaviorInstalled = true;
