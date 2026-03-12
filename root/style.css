@@ -127,7 +127,7 @@ width: min(1100px, calc(100% - 48px));
 gap: 12px;
 align-items: center;
 /*padding: 10px 0;*/
-animation: scroll 35s linear infinite;
+animation: scroll 40s linear infinite;
 display: flex;
 width: max-content;
 }
