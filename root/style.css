@@ -449,6 +449,7 @@ footer{margin-top:10px;font-size:13px; text-align:center; padding:36px 0;/*backg
 
 .testimonial-title {margin-top:0px;}
 .testimonials-chunk {margin-top:40px;}
+.testimonials-chunk p {font-weight:bold;}
 
 @media (max-width:980px){
     .hero{grid-template-columns:1fr; }
