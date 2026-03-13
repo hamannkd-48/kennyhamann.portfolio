@@ -8,7 +8,7 @@ window.onscroll = function() {
     document.getElementById("navbar").style.top = "0";
   } else {
     // User is scrolling DOWN, hide the navbar
-    document.getElementById("navbar").style.top = "-50px"; /* Match the height of the navbar */
+    document.getElementById("navbar").style.top = "-70px"; /* Match the height of the navbar */
   }
   prevScrollpos = currentScrollPos;
 }

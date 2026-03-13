@@ -162,6 +162,7 @@ background: var(--red);
 color: #fff;
 margin-right:5px;
 margin-left:45px;
+font-weight:bold;
 }
 
 .dropdown-content li a .announce-pill {
@@ -384,7 +385,7 @@ nav{display:flex; gap:12px; align-items:center;justify-content: space-between;}
 /* right and left Panel styling*/
 
 .panel{
-    background:var(--red);
+    background-image: linear-gradient(95deg, #87323c, #b84b58);
     border:1px solid rgba(255,255,255,0.04);
     padding:36px;
     border-radius:12px;
@@ -446,7 +447,8 @@ footer{margin-top:10px;font-size:13px; text-align:center; padding:36px 0;/*backg
 .modal img{width:100%; height:auto; border-radius:8px}
 .modal .close{position:absolute; right:22px; top:18px; background:transparent; border:0; color:var(--muted); font-size:18px}
 
-
+.testimonial-title {margin-top:0px;}
+.testimonials-chunk {margin-top:40px;}
 
 @media (max-width:980px){
     .hero{grid-template-columns:1fr; }
@@ -478,7 +480,9 @@ footer{margin-top:10px;font-size:13px; text-align:center; padding:36px 0;/*backg
 
 @media (max-width: 768px) { /* iPad and smaller devices */
 
-section.left {overflow-x: wrap;} 
+.testimonials-chunk{margin-top:20px;}
+
+    section.left {overflow-x: wrap;} 
 .workh3{margin-top:15px;}
 .announce {font-size:85%;}
 footer {padding-bottom:36px;}
@@ -567,6 +571,10 @@ footer {padding-bottom:36px;}
 font-size: 14px;
 }
 }
+
+/*@media (min-width:1215px) {
+    .bckred, .mainc- {display:flex;justify-content: center;}
+}*/
 
 
 

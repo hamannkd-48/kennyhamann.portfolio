@@ -1,27 +1,38 @@
+<!--MAR 12 BEFORE LEFT PANEL RESIZING PER TESTIMONIAL-->
+
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Shared Sound Initiative — Kenny Hamann</title>
+    <title>Testimonials — Kenny Hamann</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="extras.css" />
     <link rel="icon" href="assets/home/favicon.png" />
+    <!--<link rel="stylesheet" href="extras.css" />-->
     <script src="scripts/nav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <style>
+        @media (min-width:1160px){
+            .left, a.brand{margin-left:50px;}
+            header{max-width:1110px;}
+        }
+
         :root{
             --bg:#0f1115;
             --card:#0b0c0e;
             --muted:#9aa4b2;
+            --accent:#7dd3fc;
             --glass: rgba(255,255,255,0.03);
         }
         *{box-sizing:border-box}
-        html,body{height:100%}
+        html,body{height:100%;}
         body{
             margin:0;
             
             background:var(--red);
+            
             color:#dfeefb;
             -webkit-font-smoothing:antialiased;
             -moz-osx-font-smoothing:grayscale;
@@ -37,7 +48,7 @@
         .container{
             width:min(1100px,96%);
             display:grid;
-            grid-template-columns: 1fr 700px;
+            grid-template-columns: 1fr 320px;
             gap:40px;
             align-items:start;
             margin-left:20px;
@@ -128,17 +139,13 @@
 
         .left {background-image: linear-gradient(95deg, #87323c, #b84b58);}
 
-        .right img, .left img {
-            max-width:300px;height:auto; 
-        }
-
         .portrait{
             width:220px;
             height:220px;
             border-radius:50%;
             overflow:hidden;
             display:block;
-            border:1px solid rgba(255,255,255,0.06);
+            /*border:1px solid rgba(255,255,255,0.06);*/
             box-shadow: 0 10px 40px rgba(3,6,14,0.6);
             background:linear-gradient(135deg,#0c1220,#071729);
             display:flex;
@@ -175,31 +182,23 @@
         }
         @media (max-width: 768px) { /* iPad and smaller devices */
 
-       .portrait img {display:none;}
        
-       .left img, .right img{max-width:100%;height:auto;}
-        }
-        @media (max-width: 768px) { /* iPad and smaller devices */
-
-       .portrait img {display:none;}
        
-       .right {display:flex; flex-direction:column; justify-content:space-between; align-items:center;}
-       .right img {max-width:200px;}
+       @media (min-width:1200px){
+            .left, a.brand{margin-left:50px;}
+            header{max-width:1150px;}
         }
+       
+    }
 
-        @media (min-width:768px){
-            .left img {max-width:500px;}
-        }
-        
+    .site-top {
+    margin: 0px;
+    }
+
     </style>
 </head>
-
-
 <body>
-
-
 <div class="bckred" style="background:var(--red);">
-    
     <div class="site-top">
         <header>
             <a class="brand" href="../index.html">
@@ -238,62 +237,65 @@
         <main>
            
         </div>
-</div>
-
-
+    </div>
     <main class="container" role="main">
-        <aside class="panel right" aria-label="Profile"style="text-align:left;">
-            
-            <h2><strong>What is Tri-M?</strong></h2>
-            <p>Tri-M, or the Modern Music Masters, is an international music honor society for middle and high school students. It recognizes students for their musical achievements, leadership, and service to their school and community.</p>
-            <p>Students who are members of Tri-M are selected based on their musical talent, academic achievement, and dedication to community service. The organization provides opportunities for students to develop leadership skills, participate in community service projects, and perform in various musical ensembles.</p>
-            <p>Students can apply to run their own chapter of Tri-M within their school, organizing events and initiatives that promote music education and community engagement. The Sonoma Academy Tri-M chapter was started in 2018.</p>
-            
-            
-        </aside>
     
-        <section class="panel left" aria-labelledby="about-heading">
-            <div class="eyebrow">Tri-M Music Honors Society</div>
-            <h1 id="about-heading">Brand Design</h1>
-            <p class="lead"> In November of 2025, I started working with a student-founded nonprofit called the Shared Sound Initiative. The group aims to promote external music presence in settings like hospital waiting rooms and senior living communities. This is an ongoing project.</p>
-            
+        <section class="panel left test-chunk" aria-labelledby="about-heading">
+            <div class="eyebrow">What Do They Have To Say?</div>
+            <h1 id="about-heading">UNDER CONSTRUCTION!!!!!</h1>
+            <p class="lead"> This page isn't here yet. Please check back later for testimonials lol!</p>
+  
+            <hr>
 
-            <img src="assets/sa/ssi.png" alt="Shared Sound Initiative Logos">
+        <!--<div class="testimonials-chunk">
+            <div class="eyebrow">Sonoma Academy</div>
+            <h2 class="testimonial-title"><i>Testimonial content goes here...</i></h2>
             
-            <div class="contact" >
-                <a class="btn-ghost" href="https://nafme.org/student-opportunities/tri-m-music-honor-society/" target="_blank">Tri-M Website</a>
-                <!--<a class="btn-ghost" href="#" rel="noopener" target="_blank">Resume</a>-->
-            </div>
+            
+        
+        
+        </div>-->
 
-            <br><hr>
-            
-            <h2 class="h2paragraphs">Design Process</h2>
-            <p>My process follows four steps: survey, consult, design, combine. I begin by surveying the existing brand and audience perception, then consult with the business individual(s) to align goals and constraints. From there, I design visual options grounded in the brand's voice, and finally combine the strongest elements into one cohesive identity system.</p>
-            <h3>Brand Survey Questions</h3>
-            <p>I use survey questions to uncover the brand's real foundation before any visual direction is chosen. Core questions include:</p>
-            <ul>
-                <li>Who is your primary audience, and what should they feel when they encounter your brand?</li>
-                <li>What values and personality traits define your brand today?</li>
-                <li>How would you describe your business to a friend?</li>
-                <li>Which current visuals are working, and which ones feel outdated or off-message?</li>
-                <li>What do you want to be known for in the next one to three years?</li>
-                <li>Who are your closest peers or competitors, and how should your brand stand apart?</li>
-                <li>Who are your ideal customers?</li>
-            </ul>
-            
         </section>
 
-        
+
+         <aside class="panel right" aria-label="Profile">
+            <div class="portrait" role="img" aria-label="Portrait">
+                <!-- Replace portrait.jpg with your photo -->
+                <img src="assets/about/pfp.jpg" alt="Portrait of Kenny">
+            </div>
+
+            <div>
+                <div style="font-weight:700;font-size:18px">Kenny Hamann</div>
+                <div style="font-size:13px;margin-top:4px">Designer & Brand Consultant</div>
+            </div>
+
+            <nav class="social" aria-label="Social links">
+                <!--<a href="mailto:kennyhamann1312@gmail.com" rel="noopener" target="_blank" class="btn-ghost">Email</a>-->
+                <a href="https://www.instagram.com/hamannkenny_48" rel="noopener" target="_blank" class="btn-ghost socialbtn"style="font-size:14px;"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/kenneth-hamann-111490321/" rel="noopener" target="_blank" class="btn-ghost socialbtn"style="font-size:14px;"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <div class="contact" style="padding:0px;margin:0px;">
+                <a class="btn-ghost" href="assets/about/resume.png" rel="noopener" target="_blank">My Resume</a>
+            </div>
+                <!--<a href="#" rel="noopener" target="_blank" class="btn-ghost">LinkedIn</a>-->
+            </nav>
+            <p style="margin-top:24px;font-size:15px;line-height:1.6;">
+                My process follows four steps: survey, consult, design, combine. I begin by surveying the existing brand and audience perception, then consult with the business individual(s) to align goals and constraints. </p>
+                <p>From there, I design visual options grounded in the brand's voice, and finally combine the strongest elements into one cohesive identity system.</p>
+                <!--<p>If you'd like to work together or just say hi, get in touch.</p>-->
+            </p>
+
+
+            <footer class="note">Available for contract work. Rates and timelines vary by project.</footer>
+        </aside>
+
+
+
     <br>
     </main>
-
-
-
-<footer style="background-color:var(--red);">
+    <footer style="background-color:var(--red);">
             © <span id="year"></span> Kenny Hamann — All Rights Reserved
-        </footer>/*
-
-
+        </footer>
 </body>
 
 <script>

@@ -135,8 +135,6 @@
             background-image: linear-gradient(95deg, #87323c, #b84b58);
         }
 
-        .left {background-image: linear-gradient(95deg, #87323c, #b84b58);}
-
         .portrait{
             width:220px;
             height:220px;
@@ -193,6 +191,8 @@
     margin: 0px;
     }
 
+     .left {background-image: none;}
+
     </style>
 </head>
 <body>
@@ -238,23 +238,33 @@
     </div>
     <main class="container" role="main">
     
-        <section class="panel left" aria-labelledby="about-heading">
+        <section class="panel left" aria-labelledby="about-heading"style="box-shadow:none;padding:0px;border:none;">
+            
+        <div class="panel">
             <div class="eyebrow">What Do They Have To Say?</div>
             <h1 id="about-heading">UNDER CONSTRUCTION!!!!!</h1>
             <p class="lead"> This page isn't here yet. Please check back later for testimonials lol!</p>
-
-
-
+            <p>(See below how I'm testing the design!)</p>
+        </div>
             
 
-            
+        <div class="panel testimonials-chunk">
+            <div class="eyebrow">Sonoma Academy</div>
+            <h2 class="testimonial-title"><i>Testimonial content goes here...</i></h2>
+        </div>
 
+        <div class="panel testimonials-chunk">
+            <div class="eyebrow">Sonoma Academy</div>
+            <h2 class="testimonial-title"><i>Testimonial content goes here...</i></h2>
+        </div>
 
+        <div class="panel testimonials-chunk">
+            <div class="eyebrow">Sonoma Academy</div>
+            <h2 class="testimonial-title"><i>Testimonial content goes here...</i></h2>
+        </div>
 
-           
-
-            
         </section>
+
 
          <aside class="panel right" aria-label="Profile">
             <div class="portrait" role="img" aria-label="Portrait">
@@ -285,6 +295,9 @@
 
             <footer class="note">Available for contract work. Rates and timelines vary by project.</footer>
         </aside>
+
+
+
     <br>
     </main>
     <footer style="background-color:var(--red);">
