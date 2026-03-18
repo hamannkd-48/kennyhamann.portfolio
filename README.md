@@ -34,7 +34,7 @@ This portfolio demonstrates:
 /assets — images and media  
 style.css and extras.css — stylesheets  
 /index.html — homepage  
-Each .html page still does have a lot of embedded <style> script (tbh most of it is kinda redundant and I need to clean it out)
+Each .html page still does have a lot of embedded <style> script 
 
 
 ## Contact
