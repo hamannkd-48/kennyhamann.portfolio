@@ -28,6 +28,9 @@
         visibility 0s linear 0.3s; /* delay hiding */
 }
 
+.dropdown .dropdown-content {
+    width: 210px;
+}
 .dropdown-content li a {
     color: black;
     padding: 12px 16px;
@@ -544,7 +547,7 @@ footer {padding-bottom:36px;}
     position: absolute;
     left: 0;
     top: calc(100% + 8px);
-    width: 180px;
+    width: 210px;
     background: var(--bg);
     color: var(--muted);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
