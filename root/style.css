@@ -568,6 +568,8 @@ footer {padding-bottom:36px;}
 
 }
 
+.rightcaption {margin-top:0px;}
+
 
 @media (max-width: 480px) { /* iPhone and smaller devices */
 .nav-menu a {
