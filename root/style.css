@@ -280,7 +280,7 @@ nav{display:flex; gap:12px; align-items:center;justify-content: space-between;}
         text-decoration:none; color:#fff; padding:8px 12px; border-radius:8px;
     font-weight:600; font-size:14px;
 }
-.nav-link:hover{color:white; border:1px solid #d0d8da;margin:0px 9px;padding-top:8px;cursor:pointer;}
+.nav-link:hover{/*color:white; border:1px solid #d0d8da;margin:0px 9px;padding-top:8px;cursor:pointer;*/opacity:.8;}
 
 .cta{
     /*background-color:var(--muted);*/
