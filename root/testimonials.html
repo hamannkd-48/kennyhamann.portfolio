@@ -7,15 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="assets/home/favicon.png" />
+    <link rel="stylesheet" href="extras.css" />
     <!--<link rel="stylesheet" href="extras.css" />-->
     <script src="scripts/nav.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
-        @media (min-width:1160px){
+        /*@media (min-width:1160px){
             .left, a.brand{margin-left:50px;}
             header{max-width:1110px;}
-        }
+        }*/
 
         :root{
             --bg:#0f1115;
@@ -24,7 +25,7 @@
             --accent:#7dd3fc;
             --glass: rgba(255,255,255,0.03);
         }
-        *{box-sizing:border-box}
+         *{box-sizing:border-box}
         html,body{height:100%;}
         body{
             margin:0;
@@ -34,7 +35,7 @@
             color:#dfeefb;
             -webkit-font-smoothing:antialiased;
             -moz-osx-font-smoothing:grayscale;
-            /*padding:48px;*/
+            
             
         }
 
@@ -49,7 +50,7 @@
             grid-template-columns: 1fr 320px;
             gap:40px;
             align-items:start;
-            margin-left:20px;
+            /*margin-left:20px;*/
         }
         
 
@@ -141,7 +142,7 @@
             border-radius:50%;
             overflow:hidden;
             display:block;
-            /*border:1px solid rgba(255,255,255,0.06);*/
+            
             box-shadow: 0 10px 40px rgba(3,6,14,0.6);
             background:linear-gradient(135deg,#0c1220,#071729);
             display:flex;
@@ -161,7 +162,7 @@
             border-radius:8px;
             background:rgba(255,255,255,0.01);
             border:1px solid rgba(255,255,255,0.02);
-        }*/
+        }
 
         .h2paragraphs {margin-bottom:5px;font-family:'Montserrat', sans-serif;}
 
@@ -174,24 +175,35 @@
         @media (max-width:880px){
             .container{grid-template-columns:1fr; padding:0;margin-left:0px;}
             
-            /*.right{flex-direction:row;justify-content:space-between;align-items:center}*/
-        }
+            /*.right{flex-direction:row;justify-content:space-between;align-items:center}
+            
+    }*/
+        
         @media (max-width: 768px) { /* iPad and smaller devices */
 
        .testimonials-chunk, .panel {max-width:90vw;}
 
     }
 
-    @media (min-width:1200px){
+    /*@media (min-width:1200px){
             .left, a.brand{margin-left:50px;}
             header{max-width:1150px;}
-        }
+        }*/
+
+        
+    .right{
+        margin-left: 0px;
+    }
+    @media (min-width: 1200px) {.left {margin-left:50px;}}
 
     .site-top {
     margin: 0px;
     }
 
      .left {background-image: none;}
+
+     
+
 
     </style>
 </head>
@@ -236,6 +248,8 @@
            
         </div>
     </div>
+    
+  <!--<div class="main-cc"> --> 
     <main class="container" role="main">
     
         <section class="panel left" aria-labelledby="about-heading"style="box-shadow:none;padding:0px;border:none;">
@@ -304,6 +318,8 @@
 
     <br>
     </main>
+    <!--</div>-->
+    
     <footer style="background-color:var(--red);">
             © <span id="year"></span> Kenny Hamann — All Rights Reserved
         </footer>

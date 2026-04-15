@@ -2,8 +2,8 @@
 
 
 @media (min-width:1200px){
-            .right, a.brand{margin-left:50px;}
-            header{max-width:1150px;gap:200px;}
+            .right /*a.brand*/{margin-left:50px;}
+            header{max-width:/*1150px*/100vw;gap:200px;}
         }
 
 @media only screen and (min-width: 980px) and (max-width: 1080px){
@@ -24,3 +24,5 @@
         
 
     .site-top {margin:0px;}
+
+    .main-cc {display:flex;justify-content:center;}
