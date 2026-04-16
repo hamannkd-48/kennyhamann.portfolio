@@ -407,9 +407,9 @@ nav{display:flex; gap:12px; align-items:center;justify-content: space-between;}
     max-width:1500px;
 }
 
-.about {
+/*.about {
     font-size:125%;
-}
+}*/
 
 #about-heading {font-family:'Montserrat', sans-serif; font-weight:800;}
 
@@ -418,7 +418,25 @@ nav{display:flex; gap:12px; align-items:center;justify-content: space-between;}
 .about h4{font-size:30px;margin-bottom:20px;}
 .contact h4{font-size:30px;margin-bottom:20px;}
 
+ul.roles{
 
+    list-style:none;
+    padding:0;
+    margin:18px 0 24px 0;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+ul.roles li{
+    background:rgba(255,255,255,0.13);
+    padding:8px 12px;
+    border-radius:999px;
+    font-weight:600;
+    font-size:13px;
+    color:#dfeefb;
+    border:1px solid rgba(255,255,255,0.02);
+        }
 
 .aboutcontactcontainer{
     max-width:1500px;
