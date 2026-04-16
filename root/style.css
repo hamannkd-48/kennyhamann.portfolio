@@ -402,7 +402,7 @@ nav{display:flex; gap:12px; align-items:center;justify-content: space-between;}
     display:grid;
     grid-template-columns:1fr 350px;
     gap:180px;
-    margin:30px 30px;
+    margin:30px 34px;
     padding:30px 20px;
     max-width:1500px;
 }
