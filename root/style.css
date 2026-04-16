@@ -424,7 +424,7 @@ nav{display:flex; gap:12px; align-items:center;justify-content: space-between;}
     max-width:1500px;
     margin:0px auto;
     background-image: linear-gradient(135deg, var(--red), var(--lred));
-    border-radius:30px;
+    /*border-radius:30px;*/
 }
 
 .about, .contact{
@@ -476,11 +476,12 @@ footer{margin-top:10px;font-size:13px; text-align:center; padding:36px 0;/*backg
 
 }
 
-@media (max-width:1610px){
+/*@media (max-width:1610px){
     .aboutcontactcontainer{
         margin:0px 20px;
     }
 }
+*/
 
 /* MOBILE NAV */
 
