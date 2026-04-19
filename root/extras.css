@@ -27,7 +27,7 @@
 
     
     .brand h1 {line-height:1.4} /*to match index.html*/
-    .main-cc {display:flex;justify-content:center;}
+    .main-cc {display:flex;justify-content:center;min-height:75vh;}
 
     @media (min-width:1600px){
         .right {margin-left:0px;}

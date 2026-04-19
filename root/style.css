@@ -88,7 +88,7 @@ textarea #message {field-sizing: fixed;font-family: 'Roboto', sans-serif;}
     --lred:#c4515f;
     --gray:#d3d0cb;
     --glass: rgba(255,255,255,0.03);
-    --max-width:1100px;
+    --max-width:/*1100px*/80vw;
 }
 
 *{box-sizing:border-box}
