@@ -460,7 +460,7 @@ ul.roles li{
 .contact input, .contact textarea{font-family:'Nunito Sans', sans-serif;color:var(--bg); width:100%; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); /*background:transparent;*/}
 .contact button{margin-top:10px; background:var(--accent); border:0; padding:10px 14px; border-radius:8px; font-weight:700}
 
-footer{padding-top:18px;font-size:13px;  padding-bottom:36px;/*background-color:var(--red);*/display:flex;justify-content:space-between;}
+footer{padding-top:18px;font-size:13px;  padding-bottom:36px;/*background-color:var(--red);*/display:flex;justify-content:space-between;max-width: 1600px;margin:0px auto;}
 
 footer.indexfooter {border-top:1px solid white;font-size:14px;}
 
