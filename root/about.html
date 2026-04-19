@@ -13,10 +13,11 @@
     
     <style>
         
+        .main-cc {display:flex;justify-content:center;}
         .site-top {margin:0px;} /* added to extras.css too to cover the others*/
         
         @media (min-width:1160px){
-            .left /*a.brand*/{margin-left:50px;}
+            /*.left {margin-left:50px;}*/
             header{max-width:/*1110px*/100vw;}
         }
 
@@ -47,8 +48,8 @@
             justify-content:space-evenly;
         }
         .container{
-            width:min(1100px,96%);
             display:grid;
+            width:min(1200px,96%);
             grid-template-columns: 1fr 320px;
             gap:40px;
             align-items:start;
@@ -168,6 +169,10 @@
            
             /*.right{flex-direction:row;justify-content:space-between;align-items:center}*/
         }
+
+        @media (min-width:1600px){
+        .left {margin-left:0px;}
+    }
         
     </style>
 </head>
@@ -212,6 +217,8 @@
            
         </div>
     </div>
+
+    <div class="main-cc">
     <main class="container" role="main">
     
         <section class="panel left" aria-labelledby="about-heading">
@@ -290,6 +297,8 @@
         </aside>
     <br>
     </main>
+    </div>
+
         <footer>
             <div class="footer-1">© <span id="year"></span> Kenny Hamann — All Rights Reserved <!--<a href="testpage.html"style="margin-left:20px;color:#fff;text-decoration:underline">test page</a>--></div>
             <div class="footer-2"><a href="../index.html">Home</a><a href="about.html">About</a><a href="testimonials.html">Testimonials</a></div>

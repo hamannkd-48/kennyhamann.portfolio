@@ -45,7 +45,7 @@
             justify-content:space-evenly;
         }
         .container{
-            width:min(1100px,96%);
+            
             display:grid;
             grid-template-columns: 1fr 320px;
             gap:40px;
@@ -184,6 +184,12 @@
        .testimonials-chunk, .panel {max-width:90vw;}
 
     }
+    @media (max-width: 880px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin-left: 0px;
+    }}
 
     /*@media (min-width:1200px){
             .left, a.brand{margin-left:50px;}
@@ -194,7 +200,7 @@
     .right{
         margin-left: 0px;
     }
-    @media (min-width: 1200px) {.left {margin-left:50px;}}
+    
 
     .site-top {
     margin: 0px;
@@ -202,7 +208,9 @@
 
      .left {background-image: none;}
 
-     
+     @media (min-width:1600px){
+        .right {margin-left:0px;}
+    }
 
 
     </style>
@@ -249,7 +257,7 @@
         </div>
     </div>
     
-  <!--<div class="main-cc"> --> 
+  <div class="main-cc"> 
     <main class="container" role="main">
     
         <section class="panel left" aria-labelledby="about-heading"style="box-shadow:none;padding:0px;border:none;">
@@ -318,7 +326,7 @@
 
     <br>
     </main>
-    <!--</div>-->
+</div>
     
     <footer>
             <div class="footer-1">© <span id="year"></span> Kenny Hamann — All Rights Reserved <!--<a href="testpage.html"style="margin-left:20px;color:#fff;text-decoration:underline">test page</a>--></div>

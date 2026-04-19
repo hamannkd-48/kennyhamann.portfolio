@@ -1,8 +1,10 @@
 /* Extra CSS for portfolio pages- all pages but index and about */
 
 
+
+
 @media (min-width:1200px){
-            .right /*a.brand*/{margin-left:50px;}
+            /*.right {margin-left:50px;}*/
             header{max-width:/*1150px*/100vw;gap:200px;}
         }
 
@@ -23,6 +25,15 @@
 
         
 
-    .site-top {margin:0px;}
+    
     .brand h1 {line-height:1.4} /*to match index.html*/
     .main-cc {display:flex;justify-content:center;}
+
+    @media (min-width:1600px){
+        .right {margin-left:0px;}
+    }
+
+    .container {
+        grid-template-columns: 800px 1fr;
+        width:min(1200px,96%);
+    }
