@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Sonoma Academy: A comprehensive redesign showcasing graphic design and visual identity work by Kenny Hamann." />
+    <title>Sonoma Academy Redesign — Kenny Hamann</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="assets/home/favicon.png" />
+    <script src="scripts/nav.js"></script>
+
+    <style>
+        :root {
+            --red: #87323c;
+            --lred: #b84b58;
+            --bg-gradient: linear-gradient(135deg, #87323c, #b84b58);
+            --text: #dfeefb;
+            --text-muted: #b8c8d8;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent: #7db891;
+            --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            --max-width: 1200px;
+        }
+
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        /* --- Navigation Styles --- */
+        header {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 100;
+            position: relative;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .brand-text h1 { font-size: 18px; line-height: 1.2; }
+        .brand-text p { font-size: 12px; margin: 0; opacity: 0.8; }
+
+        nav { display: flex; gap: 24px; align-items: center; }
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 600;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .nav-link:hover { opacity: 1; }
+
+        .cta {
+            background: #fff;
+            color: var(--red);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- Main Content --- */
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px 24px 100px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+            padding: 60px 0;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 8vw, 72px);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(to bottom, #fff, #dfeefb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero .lead {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Project Sections */
+        .project-section {
+            margin-bottom: 120px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .project-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            max-width: 800px;
+            font-size: 16px;
+            opacity: 0.85;
+        }
+
+        /* Feature Card */
+        .feature-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            box-shadow: var(--card-shadow);
+            margin-bottom: 40px;
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .grid-item .card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 24px;
+            height: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-item .card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .grid-item h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .grid-item p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 24px;
+            border-top: 1px solid var(--glass-border);
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .footer-copy { opacity: 0.7; }
+
+        .footer-nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 24px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-nav a:hover { opacity: 1; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .project-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 48px; }
+            header { padding: 20px; }
+            nav { display: none; }
+            .feature-card { padding: 20px; }
+            footer { flex-direction: column; gap: 20px; text-align: center; }
+            .footer-nav a { margin: 0 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="../index.html">
+            <div class="logo">KH</div>
+            <div class="brand-text">
+                <h1>Kenny Hamann</h1>
+                <p>Graphic Design — Visual Identity</p>
+            </div>
+        </a>
+
+        <nav>
+            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="testimonials.html">Testimonials</a>
+            <a class="cta" href="../index.html#contact">Inquire</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="eyebrow">Comprehensive Case Study</span>
+            <h1>Sonoma Academy</h1>
+            <p class="lead">A multi-faceted design engagement encompassing institutional branding, student publication identity, and academic design explorations.</p>
+        </section>
+
+        <!-- 25th Anniversary -->
+        <section class="project-section">
+            <div class="section-header">
+                <h2>25th Anniversary Visual Identity</h2>
+                <p>Commissioned in late 2025 to commemorate a quarter-century of excellence. The goal was to create a logo system that honors the school's heritage while maintaining a modern, progressive aesthetic for the next chapter of Sonoma Academy.</p>
+            </div>
+            <div class="feature-card">
+                <img src="assets/sa/all25.png" alt="Sonoma Academy 25th Anniversary Logo Suite">
+            </div>
+        </section>
+
+        <!-- SA Paw Print -->
+        <section class="project-section">
+            <div class="section-header">
+                <h2>SA Paw Print Digital Rebranding</h2>
+                <p>Collaborated with the student-run newspaper to modernize their digital presence. The project focused on a high-impact social media identity, starting with a bold profile image and extending into post templates and storytelling frameworks.</p>
+            </div>
+            <div class="feature-card">
+                <img src="assets/sa/allpawprint.png" alt="SA Paw Print Digital Identity">
+            </div>
+        </section>
+
+        <!-- Academic & Conceptual -->
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Graphic Design & Product Concepts</h2>
+                <p>A series of works exploring design history, typography, and product packaging. These projects blend theoretical research with practical application.</p>
+            </div>
+            <div class="project-grid">
+                <div class="grid-item">
+                    <div class="card">
+                        <img src="assets/sa/fontposter.png" alt="Bauhaus and Swiss Design Poster">
+                        <h3>Design Movement Poster</h3>
+                        <p>A typographic exploration studying the principles of the Bauhaus and Swiss Design movements, emphasizing grid systems and objective clarity.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="card">
+                        <img src="assets/sa/cancover.png" alt="Wild Peak Yerba Mate Design">
+                        <h3>Wild Peak Yerba Mate</h3>
+                        <p>Final project for Graphic Design elective: A comprehensive packaging concept for a theoretical beverage company, featuring custom illustration and bold color blocking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Collateral -->
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Institutional Collateral</h2>
+                <p>Extended work for the Sonoma Academy community, ranging from UI/UX concepts for the institutional homepage to promotional event materials.</p>
+            </div>
+            <div class="project-grid">
+                <div class="grid-item">
+                    <div class="card">
+                        <img src="assets/sa/homepage.png" alt="Sonoma Academy Homepage Redesign">
+                        <h3>Homepage UI Redesign</h3>
+                        <p>A conceptual UI/UX update for the school's digital gateway, focusing on accessibility, modern aesthetics, and intuitive navigation paths.</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="card">
+                        <img src="assets/sa/shadeofjade.png" alt="Shade of Jade Event Poster">
+                        <h3>Event Promotion</h3>
+                        <p>Visual collateral for the 'Shade of Jade' concert series, combining vibrant color palettes with rhythmic typographic arrangements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-copy">
+            © <span id="year"></span> Kenny Hamann — All Rights Reserved
+        </div>
+        <div class="footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
