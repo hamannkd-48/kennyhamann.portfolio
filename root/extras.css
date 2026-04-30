@@ -149,3 +149,17 @@ header .brand h1 { font-family: 'Montserrat', sans-serif; }
     color: rgba(255, 255, 255, 0.8);
 }
 
+
+
+/*KENNY.DESIGN REDESIGN START*/
+.redonemain{
+    max-width:1000px;
+    display:grid;
+    grid-template-columns: 700px 1fr;
+    gap:40px;
+    margin:40px auto;
+}
+
+.r-right img{max-width:100%;}
+
+

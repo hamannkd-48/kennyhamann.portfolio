@@ -209,7 +209,7 @@ padding:6px 12px;
 .site-top{
     position:sticky;
     z-index:50;
-    top:45px;
+    /*top:45px;*/
     margin:0px auto;
     padding:30px;
     /*background-color:#87323c;*/
