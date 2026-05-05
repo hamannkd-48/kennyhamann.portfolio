@@ -65,9 +65,13 @@
     box-shadow: 0 6px 15px rgba(2, 6, 23, 0.6);
 }
 
+.testimonials-chunk {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .testimonials-grid a{text-decoration:none; color:#dfeefb;}
 
-.testimonial-card:hover {
+.testimonial-card:hover, .testimonials-chunk:hover{
     transform: translateY(-8px);
     /*background: rgba(255, 255, 255, 0.08);*/
     border-color: rgba(255, 255, 255, 0.2);
