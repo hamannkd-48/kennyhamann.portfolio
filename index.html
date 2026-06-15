@@ -102,54 +102,20 @@
     </div>
 
     <div class="announce" role="region" aria-label="Announcement">
-        <div class="announce-inner">
-            
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">I am now accepting new clients!</span>
-            <a class="announce-link" href="#contact">Get in touch →</a>
-            
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">See my most recent work in accessibility: a tremor-friendly joystick built on Arduino Leonardo. Plug 'n play!</span>
-            <a class="announce-link" href="https://kh-tk.vercel.app" target="_blank">See How →</a>
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">I am now accepting new clients!</span>
-            <a class="announce-link" href="#contact">Get in touch →</a>
-
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">See my most recent work in accessibility: a tremor-friendly joystick built on Arduino Leonardo. Plug 'n play!</span>
-            <a class="announce-link" href="https://kh-tk.vercel.app" target="_blank">See How →</a>
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">I am now accepting new clients!</span>
-            <a class="announce-link" href="#contact">Get in touch →</a>
-
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">See my most recent work in accessibility: a tremor-friendly joystick built on Arduino Leonardo. Plug 'n play!</span>
-            <a class="announce-link" href="https://kh-tk.vercel.app" target="_blank">See How →</a>
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">I am now accepting new clients!</span>
-            <a class="announce-link" href="#contact">Get in touch →</a>
-
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">See my most recent work in accessibility: a tremor-friendly joystick built on Arduino Leonardo. Plug 'n play!</span>
-            <a class="announce-link" href="https://kh-tk.vercel.app" target="_blank">See How →</a>
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">I am now accepting new clients!</span>
-            <a class="announce-link" href="#contact">Get in touch →</a>
-
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">See my most recent work in accessibility: a tremor-friendly joystick built on Arduino Leonardo. Plug 'n play!</span>
-            <a class="announce-link" href="https://kh-tk.vercel.app" target="_blank">See How →</a>
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">I am now accepting new clients!</span>
-            <a class="announce-link" href="#contact">Get in touch →</a>
-
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">See my most recent work in accessibility: a tremor-friendly joystick built on Arduino Leonardo. Plug 'n play!</span>
-            <a class="announce-link" href="https://kh-tk.vercel.app" target="_blank">See How →</a>
-            <span class="announce-pill">NEW</span>
-            <span class="announce-text">I am now accepting new clients!</span>
-            <a class="announce-link" href="#contact">Get in touch →</a>
-            
+        <div class="announce-track">
+            <div class="announce-group">
+                <span class="announce-item">
+                    <span class="announce-tag">NEW</span>
+                    <span class="announce-text">I am now accepting new clients!</span>
+                    <a class="announce-link" href="#contact">Get in touch →</a>
+                </span>
+                <span class="announce-separator" aria-hidden="true">✦</span>
+                <span class="announce-item">
+                    <span class="announce-tag">NEW</span>
+                    <span class="announce-text">See my most recent work in accessibility: a tremor-friendly joystick built on Arduino Leonardo. Plug 'n play!</span>
+                    <a class="announce-link" href="https://kh-tk.vercel.app" target="_blank">See How →</a>
+                </span>
+            </div>
         </div>
     </div>
 
@@ -372,6 +338,16 @@
         //nav hamburger script
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Redesigned infinite scrolling marquee cloning script
+            const marqueeTrack = document.querySelector('.announce-track');
+            const marqueeGroup = document.querySelector('.announce-group');
+            if (marqueeTrack && marqueeGroup) {
+                const clone = marqueeGroup.cloneNode(true);
+                clone.setAttribute('aria-hidden', 'true');
+                marqueeTrack.appendChild(clone);
+                marqueeTrack.classList.add('is-animated');
+            }
+
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
 

@@ -87,6 +87,7 @@ textarea #message {field-sizing: fixed;font-family: 'Roboto', sans-serif;}
     --red:#87323c;
     --lred:#c4515f;
     --gray:#d3d0cb;
+    --oat:#eae6df;
     --glass: rgba(255,255,255,0.03);
     --max-width:/*1100px*/80vw;
 }
@@ -116,94 +117,147 @@ body{
 }
 
 [role="region"][aria-label="Announcement"] {
-/*position: sticky;*/
-top: 0;
-z-index: 60;
-background: var(--oat);
-border-bottom: 1px solid var(--bg);
-padding: 10px 0;
-/*max-width:1100px;
-text-align:center;*/
-font-family:'Montserrat', sans-serif;
-color:var(--bg);
-display:block;
+    top: 0;
+    z-index: 60;
+    background: var(--oat);
+    border-bottom: 1px solid rgba(15, 15, 16, 0.15);
+    padding: 12px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--bg);
+    display: block;
 }
 
-.announce {overflow-x:hidden;}
-
-.announce-inner {
-width: min(1100px, calc(100% - 48px));
-/*margin: 0 auto;*/
-/*display: flex;*/
-gap: 12px;
-align-items: center;
-/*padding: 10px 0;*/
-animation: scroll 40s linear infinite;
-display: flex;
-width: max-content;
+.announce {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
 }
 
-.announce-inner:hover {
-animation-play-state: paused;
+.announce-track {
+    display: flex;
+    width: max-content;
+}
+
+.announce-track.is-animated {
+    animation: marquee-scroll 32s linear infinite;
+}
+
+.announce-track:hover {
+    animation-play-state: paused;
+}
+
+.announce-group {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-right: 32px;
+}
+
+.announce-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.announce-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--red);
+    color: white;
+    border: 1px solid rgba(135, 50, 60, 0.15);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.announce-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bg);
+    letter-spacing: 0.01em;
 }
 
 .announce-link {
-margin-left: auto;
-/*font-size: 14px;*/
-color: var(--bg);
-text-decoration: underline;
-
-padding:8px 12px;
-border-radius:8px;
-font-weight:bold;
-
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--red);
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s ease, opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
 .announce-link:hover {
-opacity: .8;
+    border-color: var(--red);
+    opacity: 0.95;
+}
 
+.announce-separator {
+    color: var(--lred);
+    font-size: 14px;
+    user-select: none;
 }
 
 .announce-pill {
-font-family: 'Montserrat', sans-serif;
-font-size: 12px;
-padding: 8px 16px;
-border-radius: 999px;
-background: var(--red);
-color: #fff;
-margin-right:5px;
-margin-left:45px;
-font-weight:bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: var(--red);
+    color: #fff;
+    margin-right: 5px;
+    margin-left: 45px;
+    font-weight: bold;
 }
 
 .dropdown-content li a .announce-pill {
-margin-left:10px;
-margin-bottom:40px;
-font-size:8px;
-padding:6px 12px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    font-size: 8px;
+    padding: 6px 12px;
 }
 
-/* SCROLLING TICKER
-
-.ticker {
-  overflow: hidden;
-  background: black;
-  color: white;
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
-.ticker-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 20s linear infinite;
-}
-
-.ticker-track span {
-  padding-right: 2rem;
-}*/
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+@media (prefers-reduced-motion: reduce) {
+    .announce-track.is-animated {
+        animation: none;
+    }
+    .announce {
+        overflow-x: auto;
+        white-space: normal;
+    }
+    .announce-track {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 8px 24px;
+    }
+    .announce-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding-right: 0;
+    }
+    .announce-group[aria-hidden="true"] {
+        display: none;
+    }
+    .announce-separator {
+        display: none;
+    }
 }
 
 .site-top{
