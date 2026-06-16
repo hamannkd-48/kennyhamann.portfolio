@@ -74,7 +74,7 @@
             <!--</div> #NAVBAR-->
 
             <main>
-                <section class="hero">
+                <section class="hero" data-reveal>
                     <div class="hero-left">
                         <div class="eyebrow">Independent Designer / Brand Consultant</div>
                         <h2 class="title">Kenny Hamann — Graphic Design & Visual Identities</h2>
@@ -122,7 +122,7 @@
 
 
     <div class="site-bottom">
-        <section id="work" aria-label="Work" class="scroll-element is-visible" data-reveal>
+        <section id="work" aria-label="Work" data-reveal>
             <div style="display:flex; align-items:center; justify-content:space-between;margin-bottom:52px;">
                 <h3 class="workh3">Selected Work</h3>
                 <p class="work-subtitle">A curated selection of recent projects</p>
@@ -229,8 +229,8 @@
         </section>
     </div>
     <div class="acc-container">
-        <div class="aboutcontactcontainer is-visible" data-reveal>
-            <section class="split is-visible" data-reveal>
+        <div class="aboutcontactcontainer" data-reveal>
+            <section class="split">
                 <div class="about" id="about">
                     <h4 style="margin-top:0; font-family:Montserrat, sans-serif; font-weight:800">About</h4>
                     <p>I’m a graphic designer focused on brand systems, identity, and expressive visual language. My
@@ -285,7 +285,7 @@
             </section>
 
 
-            <footer>
+            <footer data-reveal>
                 <div class="footer-1">© <span id="year"></span> Kenny Hamann — All Rights Reserved
                     <!--<a href="testpage.html"style="margin-left:20px;color:#fff;text-decoration:underline">test page</a>-->
                 </div>
@@ -624,6 +624,8 @@
         // Year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+
+    <script src="root/scripts/reveal.js"></script>
 </body>
 
 </html>
